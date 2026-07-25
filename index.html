@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ITUE301 — Advanced Web Development Frameworks | CHARUSAT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <span class="brand-mark">CHARUSAT</span>
+      <span class="brand-sub">Faculty of Technology &amp; Engineering — Dept. of Information Technology</span>
+    </div>
+    <div class="course-id">
+      <span class="course-code">ITUE301</span>
+      <span class="course-sem">Semester 5 · 2 Credits</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Course Handbook</p>
+    <h1>Advanced Web Development<br/>Frameworks</h1>
+    <p class="hero-sub">From component to cloud — six units carrying one build, the Car Details Management System, from a React component tree to a secured, containerized full-stack application.</p>
+    <div class="unit-bar" aria-label="Unit hour distribution across the syllabus">
+      <div class="unit-seg" style="--w:5"  data-label="U1 · 5h"></div>
+      <div class="unit-seg" style="--w:4"  data-label="U2 · 4h"></div>
+      <div class="unit-seg" style="--w:9"  data-label="U3 · 9h"></div>
+      <div class="unit-seg" style="--w:11" data-label="U4 · 11h"></div>
+      <div class="unit-seg" style="--w:7"  data-label="U5 · 7h"></div>
+      <div class="unit-seg" style="--w:4"  data-label="U6 · 4h"></div>
+    </div>
+    <p class="unit-bar-caption">40 teaching hours across 6 units — width shows relative weight</p>
+  </div>
+</section>
+
+<nav class="tabnav">
+  <div class="wrap tabnav-inner">
+    <button class="tab-btn active" data-tab="syllabus">Syllabus</button>
+    <button class="tab-btn" data-tab="outcomes">Course Outcomes</button>
+    <button class="tab-btn" data-tab="practicals">Practicals</button>
+    <button class="tab-btn" data-tab="materials">Materials</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- SYLLABUS -->
+  <section id="syllabus" class="tab-panel active">
+    <h2>Syllabus</h2>
+    <p class="panel-intro">Six units, forty hours, one continuous build. Each unit below maps directly to a stage of the Car Details Management System project.</p>
+
+    <div class="scheme-grid">
+      <div class="scheme-card">
+        <span class="scheme-label">Hours / Week</span>
+        <span class="scheme-value">2</span>
+      </div>
+      <div class="scheme-card">
+        <span class="scheme-label">Practical Marks</span>
+        <span class="scheme-value">50</span>
+      </div>
+      <div class="scheme-card">
+        <span class="scheme-label">Total Credit</span>
+        <span class="scheme-value">2</span>
+      </div>
+      <div class="scheme-card">
+        <span class="scheme-label">Units</span>
+        <span class="scheme-value">6</span>
+      </div>
+    </div>
+
+    <h3 class="prereq-title">Prerequisites</h3>
+    <ul class="prereq-list">
+      <li>Database concepts, query optimization, schema design, indexing</li>
+      <li>Scripting language features</li>
+    </ul>
+
+    <div class="unit-list">
+
+      <article class="unit-card">
+        <div class="unit-head"><span class="unit-num">01</span><h4>Frontend and Component Architecture</h4><span class="unit-hrs">5 hrs</span></div>
+        <ul>
+          <li>Overview of frontend architecture: MPA, SPA, SSR, SSG</li>
+          <li>Design methodology: responsive, atomic</li>
+          <li>UI component libraries · component architecture</li>
+          <li>State management: reactive patterns · routing concepts</li>
+          <li>API integration and consumption strategies</li>
+        </ul>
+      </article>
+
+      <article class="unit-card">
+        <div class="unit-head"><span class="unit-num">02</span><h4>Frontend Engineering</h4><span class="unit-hrs">4 hrs</span></div>
+        <ul>
+          <li>Rendering lifecycle · lazy code loading</li>
+          <li>WCAG principles · overview of PWA</li>
+          <li>Performance optimization</li>
+          <li>Frontend security (XSS, CSRF, token handling)</li>
+          <li>Automated testing — application &amp; security level</li>
+        </ul>
+      </article>
+
+      <article class="unit-card">
+        <div class="unit-head"><span class="unit-num">03</span><h4>Backend Architecture and Data Engineering</h4><span class="unit-hrs">9 hrs</span></div>
+        <ul>
+          <li>Richardson maturity model · middleware &amp; request lifecycle</li>
+          <li>RESTful API design</li>
+          <li>Data validation layers, error handling, schema enforcement</li>
+          <li>In-memory caching strategies · secure storage principles</li>
+          <li>Database migration principles · overview of data encryption</li>
+        </ul>
+      </article>
+
+      <article class="unit-card">
+        <div class="unit-head"><span class="unit-num">04</span><h4>Scalable Web Systems</h4><span class="unit-hrs">11 hrs</span></div>
+        <ul>
+          <li>Monolithic vs. microservices · connection pooling, query caching</li>
+          <li>Scaling: horizontal vs. vertical · stateless services</li>
+          <li>Load balancing and fault tolerance · CDN fundamentals</li>
+          <li>Asynchronous processing and message queues</li>
+          <li>Performance load testing — RPS, latency, error rate · SRE</li>
+        </ul>
+      </article>
+
+      <article class="unit-card">
+        <div class="unit-head"><span class="unit-num">05</span><h4>Cloud Deployment</h4><span class="unit-hrs">7 hrs</span></div>
+        <ul>
+          <li>Cloud computing &amp; cloud-native systems overview</li>
+          <li>Service models — serverless, IaaS, PaaS</li>
+          <li>Containerization &amp; OCI standards · Docker fundamentals</li>
+          <li>CI/CD pipelines · resource limits configuration</li>
+          <li>Deployment strategies: blue-green, rolling updates</li>
+        </ul>
+      </article>
+
+      <article class="unit-card">
+        <div class="unit-head"><span class="unit-num">06</span><h4>Security and AI Integration</h4><span class="unit-hrs">4 hrs</span></div>
+        <ul>
+          <li>Threat modelling · advanced authentication &amp; authorization</li>
+          <li>HTTPS and TLS overview · secure coding practices</li>
+          <li>AI service integration and prompt engineering</li>
+          <li>AI-assisted customized designing</li>
+          <li>Introduction to responsible AI</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- COURSE OUTCOMES -->
+  <section id="outcomes" class="tab-panel">
+    <h2>Course Outcomes</h2>
+    <p class="panel-intro">By the end of the course, students will be able to:</p>
+
+    <div class="co-list">
+      <div class="co-card">
+        <span class="co-tag">CO1</span>
+        <p>Design and implement component-based frontend systems using reactive state management and performance optimization strategies for scalable web applications.</p>
+      </div>
+      <div class="co-card">
+        <span class="co-tag">CO2</span>
+        <p>Design and implement secure RESTful backend services incorporating middleware pipelines, validation layers, and caching mechanisms.</p>
+      </div>
+      <div class="co-card">
+        <span class="co-tag">CO3</span>
+        <p>Select and evaluate appropriate data modeling, migration, encryption, and storage strategies based on workload characteristics and consistency requirements.</p>
+      </div>
+      <div class="co-card">
+        <span class="co-tag">CO4</span>
+        <p>Design scalable web system architectures by applying stateless service design, load balancing, asynchronous processing, and performance profiling techniques.</p>
+      </div>
+      <div class="co-card">
+        <span class="co-tag">CO5</span>
+        <p>Implement cloud-native deployment pipelines using containerization, CI/CD automation, and deployment strategies while monitoring reliability and resource optimization.</p>
+      </div>
+      <div class="co-card">
+        <span class="co-tag">CO6</span>
+        <p>Apply security engineering principles and responsibly integrate AI-based services into web systems while analyzing ethical, privacy, and governance implications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICALS -->
+  <section id="practicals" class="tab-panel">
+    <h2>Practicals</h2>
+    <p class="panel-intro">One project, twelve labs — the Car Details Management System, built up in React, Node/Express, and MySQL.</p>
+
+    <div class="lab-timeline">
+
+      <div class="lab-row done">
+        <div class="lab-week">Wk 1–2</div>
+        <div class="lab-id">Lab 1–2</div>
+        <div class="lab-topic">Environment setup, JSX &amp; basic components · Props &amp; component composition</div>
+        <div class="lab-status">Completed</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 3</div>
+        <div class="lab-id">Lab 3</div>
+        <div class="lab-topic">State management &amp; dynamic rendering — search, filter, view toggle</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 4</div>
+        <div class="lab-id">Lab 4</div>
+        <div class="lab-topic">React Router — multi-page navigation</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 5</div>
+        <div class="lab-id">Lab 5</div>
+        <div class="lab-topic">Forms, controlled components &amp; validation — Add Car + Parts</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 6</div>
+        <div class="lab-id">Lab 6</div>
+        <div class="lab-topic">API integration, lazy loading &amp; basic frontend security</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 7</div>
+        <div class="lab-id">Lab 7</div>
+        <div class="lab-topic">REST API with Node.js + Express (CRUD)</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 8</div>
+        <div class="lab-id">Lab 8</div>
+        <div class="lab-topic">MySQL database design &amp; integration</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 9</div>
+        <div class="lab-id">Lab 9</div>
+        <div class="lab-topic">Middleware, validation, caching &amp; error handling</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 10</div>
+        <div class="lab-id">Lab 10</div>
+        <div class="lab-topic">Connecting frontend to backend — full CRUD</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 11</div>
+        <div class="lab-id">Lab 11</div>
+        <div class="lab-topic">Authentication &amp; security — JWT, XSS awareness</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+      <div class="lab-row">
+        <div class="lab-week">Wk 12</div>
+        <div class="lab-id">Lab 12</div>
+        <div class="lab-topic">Dockerization, deployment &amp; AI integration overview</div>
+        <div class="lab-status">Upcoming</div>
+      </div>
+
+    </div>
+
+    <p class="panel-footnote">By Lab 12, students will have a complete Car Details Management System — new &amp; old cars, per-car parts history, pricing, search &amp; filtering, authentication, and a Dockerized deployment.</p>
+  </section>
+
+  <!-- MATERIALS -->
+  <section id="materials" class="tab-panel">
+    <h2>Materials</h2>
+    <p class="panel-intro">Reference material and further study resources for the course.</p>
+
+    <h3 class="prereq-title">Text Books</h3>
+    <ul class="material-list">
+      <li>Web Technologies — Uttam K. Roy, Oxford University Press</li>
+      <li>Internet and Web Technologies — Raj Kamal, McGraw Hill Education</li>
+      <li>Cloud Computing — Anthony T. V., et al., McGraw Hill Education</li>
+    </ul>
+
+    <h3 class="prereq-title">Reference Books</h3>
+    <ul class="material-list">
+      <li>Designing Data-Intensive Applications — Martin Kleppmann</li>
+      <li>Clean Code — Robert C. Martin</li>
+      <li>Distributed Systems: Concepts and Design — George Coulouris, et al., Pearson Education</li>
+    </ul>
+
+    <h3 class="prereq-title">Online / Pre-requisite Resources</h3>
+    <ul class="material-list">
+      <li>Client-server architecture</li>
+      <li>UI/UX principles</li>
+      <li>State management</li>
+      <li>Schema design principles</li>
+      <li>ACID vs. BASE properties</li>
+    </ul>
+
+    <h3 class="prereq-title">Certification</h3>
+    <p class="panel-intro" style="margin-bottom:0;">One COURSERA / NPTEL certification aligned with the syllabus will be announced during the semester as an advanced-knowledge track.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">CHARUSAT · Faculty of Technology &amp; Engineering · ITUE301 — Advanced Web Development Frameworks</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

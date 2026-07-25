@@ -1,0 +1,392 @@
+:root {
+  --navy: #1F3864;
+  --navy-deep: #142445;
+  --gold: #BF9000;
+  --gold-soft: #E8C766;
+  --paper: #F7F5F0;
+  --ink: #1A1A1A;
+  --ink-soft: #565045;
+  --line: #DCD7C9;
+  --card: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--navy);
+  margin: 0;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+a { color: inherit; }
+
+/* Header */
+.site-header {
+  background: var(--navy-deep);
+  color: #fff;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand-mark {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 15px;
+  display: block;
+}
+.brand-sub {
+  font-size: 12px;
+  color: #B7C2DA;
+  display: block;
+  margin-top: 2px;
+}
+.course-id { text-align: right; }
+.course-code {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--gold);
+  color: var(--navy-deep);
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+.course-sem {
+  display: block;
+  font-size: 11px;
+  color: #B7C2DA;
+  margin-top: 5px;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: #fff;
+  padding: 56px 0 40px;
+}
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin: 0 0 14px;
+}
+.hero h1 {
+  color: #fff;
+  font-size: 42px;
+  line-height: 1.12;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.hero-sub {
+  max-width: 640px;
+  color: #C7D0E5;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+/* Signature unit-weight bar */
+.unit-bar {
+  display: flex;
+  width: 100%;
+  height: 34px;
+  border-radius: 6px;
+  overflow: hidden;
+  gap: 2px;
+}
+.unit-seg {
+  flex-grow: var(--w);
+  flex-basis: 0;
+  position: relative;
+  background: rgba(255,255,255,0.14);
+  border-top: 2px solid var(--gold-soft);
+  transition: background 0.2s;
+}
+.unit-seg:nth-child(1) { background: rgba(191,144,0,0.30); }
+.unit-seg:nth-child(2) { background: rgba(191,144,0,0.42); }
+.unit-seg:nth-child(3) { background: rgba(191,144,0,0.58); }
+.unit-seg:nth-child(4) { background: rgba(191,144,0,0.75); }
+.unit-seg:nth-child(5) { background: rgba(191,144,0,0.55); }
+.unit-seg:nth-child(6) { background: rgba(191,144,0,0.38); }
+.unit-seg::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: #AEB9D1;
+  white-space: nowrap;
+}
+.unit-bar-caption {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #8493B3;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Tab nav */
+.tabnav {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.tabnav-inner {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 16px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab-btn:hover { color: var(--navy); }
+.tab-btn.active {
+  color: var(--navy);
+  border-bottom-color: var(--gold);
+}
+
+/* Panels */
+main.wrap { padding-top: 40px; padding-bottom: 60px; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+.tab-panel h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.panel-intro {
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+.panel-footnote {
+  margin-top: 24px;
+  padding: 16px 18px;
+  background: #EFE9D8;
+  border-left: 3px solid var(--gold);
+  color: var(--navy-deep);
+  font-size: 14.5px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Syllabus */
+.scheme-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.scheme-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.scheme-label {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  font-family: 'JetBrains Mono', monospace;
+}
+.scheme-value {
+  font-family: 'Source Serif 4', serif;
+  font-size: 26px;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.prereq-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 8px;
+}
+.prereq-list, .material-list {
+  margin: 0 0 24px;
+  padding-left: 20px;
+  color: var(--ink-soft);
+}
+.prereq-list li, .material-list li { margin-bottom: 6px; }
+
+.unit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+.unit-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 4px;
+  padding: 18px 22px;
+}
+.unit-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.unit-num {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 14px;
+}
+.unit-head h4 {
+  font-size: 18px;
+  flex: 1;
+}
+.unit-hrs {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-soft);
+  background: var(--paper);
+  padding: 3px 9px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+.unit-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
+.unit-card li { margin-bottom: 5px; }
+
+/* Course Outcomes */
+.co-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.co-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.co-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  color: #fff;
+  background: var(--navy);
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  flex-shrink: 0;
+}
+.co-card p { margin: 0; font-size: 14.5px; color: var(--ink); }
+
+/* Practicals timeline */
+.lab-timeline {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+.lab-row {
+  display: grid;
+  grid-template-columns: 70px 80px 1fr 100px;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14.5px;
+}
+.lab-week {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+}
+.lab-id {
+  font-weight: 700;
+  color: var(--navy);
+}
+.lab-topic { color: var(--ink); }
+.lab-status {
+  font-size: 11.5px;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: right;
+  color: var(--ink-soft);
+}
+.lab-row.done .lab-status {
+  color: #2F7A4D;
+  font-weight: 600;
+}
+.lab-row.done { background: #F2F7F3; }
+
+/* Footer */
+.site-footer {
+  background: var(--navy-deep);
+  color: #8493B3;
+  font-size: 12.5px;
+  padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .hero h1 { font-size: 30px; }
+  .scheme-grid { grid-template-columns: repeat(2, 1fr); }
+  .co-list { grid-template-columns: 1fr; }
+  .lab-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 14px 4px;
+  }
+  .lab-status { text-align: left; }
+  .unit-bar-caption { margin-top: 22px; }
+}
+
+/* Accessibility */
+.tab-btn:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tab-panel.active { animation: none; }
+  html { scroll-behavior: auto; }
+}
