@@ -358,6 +358,48 @@ main.wrap { padding-top: 40px; padding-bottom: 60px; }
 }
 .lab-row.done { background: #F2F7F3; }
 
+/* Expandable task rows */
+.lab-row-exp {
+  border-bottom: 1px solid var(--line);
+}
+.lab-row-exp summary.lab-row {
+  border-bottom: none;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+.lab-row-exp summary.lab-row::-webkit-details-marker { display: none; }
+.lab-row-exp summary.lab-row::before {
+  content: "+";
+  position: absolute;
+  right: -2px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 15px;
+}
+.lab-row-exp[open] summary.lab-row::before { content: "\2212"; }
+.lab-row-exp:hover summary.lab-row { background: #F7F5F0; }
+.task-list {
+  margin: 0;
+  padding: 4px 4px 18px 96px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.task-list li::marker {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .task-list { padding-left: 20px; }
+  .lab-row-exp summary.lab-row::before { top: 14px; }
+}
+
 /* Footer */
 .site-footer {
   background: var(--navy-deep);
