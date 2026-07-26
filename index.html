@@ -28,7 +28,15 @@
     <p class="eyebrow">Course Handbook</p>
     <h1>Advanced Web Development<br/>Frameworks</h1>
     <p class="hero-sub">From component to cloud — six units carrying one build, the Car Details Management System, from a React component tree to a secured, containerized full-stack application.</p>
-    
+    <div class="unit-bar" aria-label="Unit hour distribution across the syllabus">
+      <div class="unit-seg" style="--w:5"  data-label="U1 · 5h"></div>
+      <div class="unit-seg" style="--w:4"  data-label="U2 · 4h"></div>
+      <div class="unit-seg" style="--w:9"  data-label="U3 · 9h"></div>
+      <div class="unit-seg" style="--w:11" data-label="U4 · 11h"></div>
+      <div class="unit-seg" style="--w:7"  data-label="U5 · 7h"></div>
+      <div class="unit-seg" style="--w:4"  data-label="U6 · 4h"></div>
+    </div>
+    <p class="unit-bar-caption">40 teaching hours across 6 units — width shows relative weight</p>
   </div>
 </section>
 
@@ -191,19 +199,39 @@
         <div class="lab-status">Completed</div>
       </div>
 
-      <div class="lab-row">
-        <div class="lab-week">Wk 3</div>
-        <div class="lab-id">Lab 3</div>
-        <div class="lab-topic">State management &amp; dynamic rendering — search, filter, view toggle</div>
-        <div class="lab-status">Upcoming</div>
-      </div>
+      <details class="lab-row-exp">
+        <summary class="lab-row">
+          <div class="lab-week">Wk 3</div>
+          <div class="lab-id">Lab 3</div>
+          <div class="lab-topic">State management &amp; dynamic rendering — search, filter, view toggle</div>
+          <div class="lab-status">Upcoming</div>
+        </summary>
+        <ol class="task-list">
+          <li>Convert the static car array into a state variable using useState in App.jsx (or a parent container component).</li>
+          <li>Add a search input box above the car list; filter and display only cars whose make or model matches the typed text.</li>
+          <li>Add a dropdown to filter cars by fuel type (All / Petrol / Diesel / Electric).</li>
+          <li>Add a toggle button to switch the car list between Grid view and List view using conditional rendering.</li>
+          <li>Display the total number of cars and the number of cars matching the current filter, updated dynamically.</li>
+          <li>Bonus: Use useEffect to log a message to the console every time the filtered list changes.</li>
+        </ol>
+      </details>
 
-      <div class="lab-row">
-        <div class="lab-week">Wk 4</div>
-        <div class="lab-id">Lab 4</div>
-        <div class="lab-topic">React Router — multi-page navigation</div>
-        <div class="lab-status">Upcoming</div>
-      </div>
+      <details class="lab-row-exp">
+        <summary class="lab-row">
+          <div class="lab-week">Wk 4</div>
+          <div class="lab-id">Lab 4</div>
+          <div class="lab-topic">React Router — multi-page navigation</div>
+          <div class="lab-status">Upcoming</div>
+        </summary>
+        <ol class="task-list">
+          <li>Install react-router-dom and set up routing in App.jsx with routes for Home, Add Car, Car Details, and Old Car Parts pages.</li>
+          <li>Create a Navbar component with links to Home, Add Car, and Old Car Parts pages using the Link component.</li>
+          <li>Implement a dynamic route /car/:id that displays a Car Details page for the selected car (use useParams).</li>
+          <li>On the car list, wrap each CarCard in a Link so clicking it navigates to /car/:id.</li>
+          <li>Add a simple 404 'Page Not Found' route for any unmatched URL.</li>
+          <li>Bonus: Use useNavigate to add a 'Back to List' button on the Car Details page.</li>
+        </ol>
+      </details>
 
       <div class="lab-row">
         <div class="lab-week">Wk 5</div>
